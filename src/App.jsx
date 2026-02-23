@@ -29,7 +29,7 @@ function App() {
   const bgMusic = useRef(null);
 
   useEffect(() => {
-    fetch("/Baby/baby.json")
+    fetch(`${import.meta.env.BASE_URL}Baby/baby.json`)
       .then((res) => res.json())
       .then((data) => setImages(data))
       .catch((err) => console.error(err));
